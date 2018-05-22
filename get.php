@@ -1,9 +1,6 @@
 <?php
-
-
-
-
-
+// Coded by HTTZIP
+// Share on httzip.com
 function getid($link)
 {
 	$get = file_get_contents($link);
@@ -36,8 +33,9 @@ function getid($link)
 if(!empty($_GET['id']))
 {
 $token = ""; // Access_Token
+$limit = "500"; // Số lượng UID sẽ được lấy mỗi lượt foreach
 
-getid("https://graph.facebook.com/".$_GET['id']."/members?fields=id&limit=100&access_token=".$token);
+getid("https://graph.facebook.com/".$_GET['id']."/members?fields=id&limit=".$limit."&access_token=".$token);
 }else{
 	echo "Invail Group ID";
 }
