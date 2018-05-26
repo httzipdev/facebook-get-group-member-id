@@ -19,7 +19,7 @@ function getid($link)
 	$count = count($decode['data']);
 	$i= 0;
 	foreach ($decode['data'] as $data) {
-		
+		$list='list.txt';
 		$file = fopen($list, 'a');
 		fwrite($file, $data['id']."\n");
 		fclose($file);
