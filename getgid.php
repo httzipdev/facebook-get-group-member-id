@@ -27,7 +27,7 @@ function getid($link)
 		
 		if($i == $count)
 		{
-			if(empty($link = $decode['paging']['next']))
+			if(empty($decode['paging']['next']))
 			{
 				echo "Hoàn tất ";
 				return false;
